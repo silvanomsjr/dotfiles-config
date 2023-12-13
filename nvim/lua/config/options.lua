@@ -12,6 +12,7 @@ vim.opt.swapfile = false
 vim.opt.ignorecase = true
 vim.opt.timeoutlen = 300
 vim.opt.number = true
+vim.opt.termguicolors = true
 -- use treesitter folding
 vim.opt.foldmethod = 'expr'
 vim.opt.foldexpr = 'nvim_treesitter#foldexpr()'

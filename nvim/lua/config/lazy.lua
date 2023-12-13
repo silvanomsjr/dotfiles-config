@@ -19,7 +19,11 @@ local plugins = {
     },
     config = function ()
       local tree = require 'nvim-tree'
-      tree.setup()
+      tree.setup {
+        filters = {
+          git_ignored = false,
+        }
+      }
     end
   },
   {
@@ -52,8 +56,14 @@ local plugins = {
       -- or leave it empty to use the default settings
       -- refer to the configuration section below
     }
-  }
-
+  },
+  {
+    'nvim-telescope/telescope.nvim',
+    tag = '0.1.5',
+    dependencies = { 
+      'nvim-lua/plenary.nvim'
+    }
+  },
 }
 
 
