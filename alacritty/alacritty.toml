@@ -23,7 +23,7 @@ white = "0xf8f8f2"
 yellow = "0xffff80"
 
 [colors.primary]
-background = "0x22212c"
+background = "#041419"
 foreground = "0xf8f8f2"
 
 [colors.selection]
@@ -35,7 +35,7 @@ family = "Liga SFMono Nerd Font"
 style = "Regular"
 
 [window]
-opacity = 0.9
+opacity = 0.96
 startup_mode = "Maximized"
 
 [window.padding]
