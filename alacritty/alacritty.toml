@@ -1,38 +1,40 @@
 [colors.bright]
-black = "0x22212c"
-blue = "0xaa99ff"
-cyan = "0x99ffee"
-green = "0xa2ff99"
-magenta = "0xff99cc"
-red = "0xffaa99"
-white = "0xffffff"
-yellow = "0xffff99"
+black = "0x100F0F"
+blue = "0x4385BE"
+cyan = "0x3AA99F"
+green = "0x879A39"
+magenta = "0xCE5D97"
+red = "0xD14D41"
+white = "0xFFFCF0"
+yellow = "0xD0A215"
 
 [colors.cursor]
-cursor = "0xf8f8f2"
-text = "0x454158"
+cursor = "0xFFFCF0"
+text = "0xFFFCF0"
+
+[colors.dim]
+black = "0x100F0F"
+blue = "0x205EA6"
+cyan = "0x24837B"
+green = "0x66800B"
+magenta = "0xA02F6F"
+red = "0xAF3029"
+white = "0xFFFCF0"
+yellow = "0xAD8301"
 
 [colors.normal]
-black = "0x22212c"
-blue = "0x9580ff"
-cyan = "0x80ffea"
-green = "0x8aff80"
-magenta = "0xff80bf"
-red = "0xff9580"
-white = "0xf8f8f2"
-yellow = "0xffff80"
+black = "0x100F0F"
+blue = "0x205EA6"
+cyan = "0x24837B"
+green = "0x66800B"
+magenta = "0xA02F6F"
+red = "0xAF3029"
+white = "0xFFFCF0"
+yellow = "0xAD8301"
 
 [colors.primary]
 background = "#041419"
-foreground = "0xf8f8f2"
-
-[colors.selection]
-background = "0x454158"
-text = "0xf8f8f2"
-
-[font.normal]
-family = "Liga SFMono Nerd Font"
-style = "Regular"
+foreground = "0xFFFCF0"
 
 [window]
 opacity = 0.96
