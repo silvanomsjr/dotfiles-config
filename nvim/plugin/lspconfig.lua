@@ -7,18 +7,36 @@ masonlspconfig.setup({
   automatic_installation = true,
 })
 
+-- Neodev Stuff
+require('neodev').setup({})
+
 -- Setup language servers.
 local lspconfig = require('lspconfig')
 local servers = {
   'pyright',
   'tsserver',
+  'volar',
+  'lua_ls',
+  'html',
 }
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 for _, server in pairs(servers) do
-  lspconfig[server].setup {
-    capabilities = capabilities
-  } 
+  if server == 'lua_ls' then
+    lspconfig[server].setup {
+      settings = {
+        Lua = {
+          completion = {
+            callSnippet = "Replace"
+          }
+        }
+      }
+    }
+  else
+    lspconfig[server].setup {
+      capabilities = capabilities
+    }
+  end
 end
 
 
@@ -55,7 +73,23 @@ vim.api.nvim_create_autocmd('LspAttach', {
     vim.keymap.set({ 'n', 'v' }, '<space>ca', vim.lsp.buf.code_action, opts)
     vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
     vim.keymap.set('n', '<space>f', function()
-      vim.lsp.buf.format { async = true }
+      vim.lsp.buf.format {
+        async = false,
+      }
+      vim.diagnostic.enable(0)
     end, opts)
   end,
 })
+local state =''
+vim.diagnostic.config({
+  virtual_text = true,
+  signs = true,
+  underline = true,
+  update_in_insert = true,
+  severity_sort = false,
+})
+local signs = { Error = "󰅚 ", Warn = "󰀪 ", Hint = "󰌶 ", Info = " " }
+for type, icon in pairs(signs) do
+  local hl = "DiagnosticSign" .. type
+  vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
+end

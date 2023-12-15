@@ -60,7 +60,7 @@ local plugins = {
   {
     'nvim-telescope/telescope.nvim',
     tag = '0.1.5',
-    dependencies = { 
+    dependencies = {
       'nvim-lua/plenary.nvim'
     }
   },
@@ -88,6 +88,9 @@ local plugins = {
   {
     'williamboman/mason-lspconfig.nvim'
   },
+  {
+    'folke/neodev.nvim'
+  }
 }
 
 
