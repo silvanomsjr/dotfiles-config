@@ -90,7 +90,13 @@ local plugins = {
   },
   {
     'folke/neodev.nvim'
-  }
+  },
+  {
+    'Olical/conjure'
+  },
+  {
+    'PaterJason/cmp-conjure'
+  },
 }
 
 

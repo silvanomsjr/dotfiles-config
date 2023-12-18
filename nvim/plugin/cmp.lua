@@ -1,6 +1,6 @@
 -- Set up nvim-cmp.
-local cmp = require'cmp'
-local luasnip = require'luasnip'
+local cmp = require 'cmp'
+local luasnip = require 'luasnip'
 
 require('luasnip.loaders.from_vscode').lazy_load()
 
@@ -29,7 +29,7 @@ cmp.setup({
       else
         fallback()
       end
-    end, {"i", "s"}),
+    end, { "i", "s" }),
 
     ["<S-Tab>"] = cmp.mapping(function(fallback)
       if cmp.visible() then
@@ -39,11 +39,12 @@ cmp.setup({
       else
         fallback()
       end
-    end, {"i", "s"}),
+    end, { "i", "s" }),
   }),
   sources = cmp.config.sources({
     { name = 'nvim_lsp' },
     { name = 'luasnip' }, -- For luasnip users.
+    { name = 'conjure' }
   }, {
     { name = 'buffer' },
   })
@@ -75,4 +76,3 @@ cmp.setup.cmdline(':', {
     { name = 'cmdline' }
   })
 })
-

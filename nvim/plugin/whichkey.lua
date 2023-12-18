@@ -6,7 +6,7 @@ local mappings = {
   q = { '<cmd>quitall<cr>', 'Sair de tudo' },
   t = {
     name = 'Telescope',
-    f = { '<cmd>Telescope find_files<cr>', 'Encontrar arquivos'},
+    f = { '<cmd>Telescope find_files<cr>', 'Encontrar arquivos' },
     l = { '<cmd>Telescope live_grep<cr>', 'Live Grep' },
     k = { '<cmd>Telescope keymaps<cr>', 'Keymaps' },
     h = { '<cmd>Telescope help_tags<cr>', 'Help tags' },
@@ -19,4 +19,4 @@ local mappings = {
   },
 }
 
-wk.register(mappings, { prefix = '<leader>'} )
+wk.register(mappings, { prefix = '<leader>' })

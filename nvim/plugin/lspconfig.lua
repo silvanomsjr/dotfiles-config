@@ -18,6 +18,8 @@ local servers = {
   'volar',
   'lua_ls',
   'html',
+  'clojure_lsp',
+  'clangd',
 }
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
@@ -83,7 +85,7 @@ vim.diagnostic.config({
   virtual_text = true,
   signs = true,
   underline = true,
-  update_in_insert = true,
+  update_in_insert = false,
   severity_sort = false,
 })
 local signs = { Error = "󰅚 ", Warn = "󰀪 ", Hint = "󰌶 ", Info = " " }
