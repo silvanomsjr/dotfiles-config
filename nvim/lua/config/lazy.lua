@@ -1,11 +1,11 @@
-local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+local lazypath = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
-    "git",
-    "clone",
-    "--filter=blob:none",
-    "https://github.com/folke/lazy.nvim.git",
-    "--branch=stable", -- latest stable release
+    'git',
+    'clone',
+    '--filter=blob:none',
+    'https://github.com/folke/lazy.nvim.git',
+    '--branch=stable', -- latest stable release
     lazypath,
   })
 end
@@ -17,7 +17,7 @@ local plugins = {
     dependencies = {
       'nvim-tree/nvim-web-devicons'
     },
-    config = function ()
+    config = function()
       local tree = require 'nvim-tree'
       tree.setup {
         filters = {
@@ -45,8 +45,8 @@ local plugins = {
     lazy = false,
   },
   {
-    "folke/which-key.nvim",
-    event = "VeryLazy",
+    'folke/which-key.nvim',
+    event = 'VeryLazy',
     init = function()
       vim.o.timeout = true
       vim.o.timeoutlen = 300
@@ -97,6 +97,36 @@ local plugins = {
   {
     'PaterJason/cmp-conjure'
   },
+  {
+    'typicode/bg.nvim',
+    lazy = false,
+  },
+  {
+    'catppuccin/nvim',
+    name = 'catppuccin',
+    priority = 1000
+  },
+  {
+    'rebelot/kanagawa.nvim'
+  },
+  {
+    'savq/melange-nvim'
+  },
+  {
+    'folke/tokyonight.nvim',
+    lazy = false,
+    priority = 1000,
+    opts = {},
+  },
+  {
+    'akinsho/bufferline.nvim'
+  },
+  {
+    'nvim-lualine/lualine.nvim'
+  },
+  {
+    'moll/vim-bbye'
+  }
 }
 
 
