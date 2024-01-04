@@ -22,7 +22,8 @@ local plugins = {
       tree.setup {
         filters = {
           git_ignored = false,
-        }
+        },
+        update_focused_file = { enable = true }
       }
     end
   },
