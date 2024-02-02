@@ -1,50 +1,45 @@
+# Kanagawa Dragon Alacritty Colors
 colors:
-  # Default colors
   primary:
-    background: '#041419'
-    foreground: "0xFFFCF0"
-  # Cursor colors
-  cursor:
-    text: "0xFFFCF0"
-    cursor: "0xFFFCF0"
+    background: '#181616'
+    foreground: '#c5c9c5'
 
-  # Normal colors
   normal:
-    black: "0x100F0F"
-    red: "0xAF3029"
-    green: "0x66800B"
-    yellow: "0xAD8301"
-    blue: "0x205EA6"
-    magenta: "0xA02F6F"
-    cyan: "0x24837B"
-    white: "0xFFFCF0"
+    black:   '#0d0c0c'
+    red:     '#c4746e'
+    green:   '#8a9a7b'
+    yellow:  '#c4b28a'
+    blue:    '#8ba4b0'
+    magenta: '#a292a3'
+    cyan:    '#8ea4a2'
+    white:   '#C8C093'
 
-  # Bright colors
   bright:
-    black: "0x100F0F"
-    red: "0xD14D41"
-    green: "0x879A39"
-    yellow: "0xD0A215"
-    blue: "0x4385BE"
-    magenta: "0xCE5D97"
-    cyan: "0x3AA99F"
-    white: "0xFFFCF0"
+    black:   '#a6a69c'
+    red:     '#E46876'
+    green:   '#87a987'
+    yellow:  '#E6C384'
+    blue:    '#7FB4CA'
+    magenta: '#938AA9'
+    cyan:    '#7AA89F'
+    white:   '#c5c9c5'
 
-  # Dim colors
-  dim:
-    black: "0x100F0F"
-    red: "0xAF3029"
-    green: "0x66800B"
-    yellow: "0xAD8301"
-    blue: "0x205EA6"
-    magenta: "0xA02F6F"
-    cyan: "0x24837B"
-    white: "0xFFFCF0"
+  selection:
+    background: '#2D4F67'
+    foreground: '#C8C093'
+
+  indexed_colors:
+    - { index: 16, color: '#b6927b' }
+    - { index: 17, color: '#b98d7b' }
 window:
   padding:
     x: 8
     y: 8
-  opacity: 0.96
+  opacity: 0.93
   startup_mode: Maximized
+  decorations: None
 
-
+font:
+  normal:
+    family: Liga SFMono Nerd Font
+    style: Regular

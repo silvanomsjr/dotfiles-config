@@ -22,11 +22,10 @@ vim.opt.foldmethod = 'expr'
 vim.opt.foldexpr = 'nvim_treesitter#foldexpr()'
 vim.opt.foldenable = false
 
-
 -- Isso aqui é pra tirar o background do NvimTree
 
 vim.api.nvim_create_autocmd("VimEnter", {
-  callback = function ()
+  callback = function()
     vim.cmd(":highlight NvimTreeNormal guibg=NONE ctermbg=NONE")
     vim.cmd(":highlight NvimTreeNormalNC guibg=NONE ctermbg=NONE")
     vim.cmd(":highlight NvimTreeWinSeparator guibg=NONE ctermbg=NONE guifg=#000000")
