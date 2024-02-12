@@ -140,6 +140,15 @@ local plugins = {
     end,
     ft = { "markdown" },
   },
+  {
+    'folke/trouble.nvim'
+  },
+  {
+    'norcalli/nvim-colorizer.lua'
+  },
+  {
+    'kylechui/nvim-surround'
+  }
 }
 
 
