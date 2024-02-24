@@ -148,7 +148,19 @@ local plugins = {
   },
   {
     'kylechui/nvim-surround'
-  }
+  },
+  {
+    'sudoerwx/vim-ray-so-beautiful'
+  },
+  {
+    'f-person/git-blame.nvim'
+  },
+  {
+    'radenling/vim-dispatch-neovim'
+  },
+  {
+    'clojure-vim/vim-jack-in'
+  },
 }
 
 

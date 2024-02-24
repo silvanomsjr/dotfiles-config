@@ -8,7 +8,7 @@ vim.opt.conceallevel = 0
 vim.opt.smartindent = true
 vim.opt.wrap = true -- wrap lines
 vim.opt.updatetime = 600
-vim.opt.writebackup = false
+vim.opt.writebackup = true
 vim.opt.expandtab = true
 vim.opt.scrolloff = 8
 vim.opt.swapfile = false
@@ -31,3 +31,14 @@ vim.api.nvim_create_autocmd("VimEnter", {
     vim.cmd(":highlight NvimTreeWinSeparator guibg=NONE ctermbg=NONE guifg=#000000")
   end
 })
+
+
+-- Printer
+
+vim.g.ray_options = {
+  theme = 'falcon',
+  background = true,
+  darkMode = true,
+  padding = 32,
+  language = 'auto'
+}

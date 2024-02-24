@@ -9,6 +9,9 @@ telescope.setup {
       "--line-number",
       "--column",
       "--smart-case",
+    },
+    preview = {
+      treesitter = false,
     }
   }
 }
