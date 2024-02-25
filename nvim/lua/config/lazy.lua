@@ -93,12 +93,6 @@ local plugins = {
     'folke/neodev.nvim'
   },
   {
-    'Olical/conjure'
-  },
-  {
-    'PaterJason/cmp-conjure'
-  },
-  {
     'typicode/bg.nvim',
     lazy = false,
   },
@@ -156,12 +150,8 @@ local plugins = {
     'f-person/git-blame.nvim'
   },
   {
-    'radenling/vim-dispatch-neovim'
+    'Olical/conjure'
   },
-  {
-    'clojure-vim/vim-jack-in'
-  },
-}
-
+ }
 
 require('lazy').setup(plugins)
