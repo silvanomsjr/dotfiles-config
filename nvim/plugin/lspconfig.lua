@@ -23,6 +23,7 @@ local servers = {
   'svelte',
   'jsonls',
   'cssls',
+  'gopls',
 }
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 

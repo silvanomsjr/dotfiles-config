@@ -17,8 +17,8 @@ dashboard.section.header.val = {
 dashboard.section.buttons.val = {
   dashboard.button("f", ">find file", ":Telescope find_files <CR>"),
   dashboard.button("r", ">recent files", ":Telescope oldfiles <CR>"),
+  dashboard.button("l", ">live grep", ":Telescope live_grep <CR>"),
   dashboard.button("t", ">todolist", ":e ~/Documentos/personal/todolist.md <CR>"),
-  dashboard.button("c", ">config", ":e ~/.config/nvim/init.lua <CR>"),
   dashboard.button("q", ">quit", ":qa<CR>"),
 }
 dashboard.section.buttons.opts = {

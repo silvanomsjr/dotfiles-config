@@ -150,8 +150,51 @@ local plugins = {
     'f-person/git-blame.nvim'
   },
   {
-    'Olical/conjure'
+    "folke/noice.nvim",
+    event = "VeryLazy",
+    opts = {
+      -- add any options here
+    },
+    dependencies = {
+      -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+      "MunifTanjim/nui.nvim",
+      -- OPTIONAL:
+      --   `nvim-notify` is only needed, if you want to use the notification view.
+      --   If not available, we use `mini` as the fallback
+      "rcarriga/nvim-notify",
+    }
   },
- }
+  {
+    'Olical/conjure',
+    ft = { "clojure", "fennel", "python" }, -- etc
+    -- [Optional] cmp-conjure for cmp
+    dependencies = {
+      {
+        "PaterJason/cmp-conjure",
+        config = function()
+          local cmp = require("cmp")
+          local config = cmp.get_config()
+          table.insert(config.sources, {
+            name = "buffer",
+            option = {
+              sources = {
+                { name = "conjure" },
+              },
+            },
+          })
+          cmp.setup(config)
+        end,
+      },
+    },
+    config = function(_, opts)
+      require("conjure.main").main()
+      require("conjure.mapping")["on-filetype"]()
+    end,
+    init = function()
+      -- Set configuration options here
+      vim.g["conjure#debug"] = false
+    end,
+  },
+}
 
 require('lazy').setup(plugins)
