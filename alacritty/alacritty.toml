@@ -38,6 +38,9 @@ foreground = "#C8C093"
 family = "Liga SFMono Nerd Font"
 style = "Regular"
 
+[mouse]
+hide_when_typing = true
+
 [window]
 decorations = "None"
 opacity = 0.93

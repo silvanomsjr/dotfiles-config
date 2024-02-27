@@ -29,6 +29,7 @@ vim.api.nvim_create_autocmd("VimEnter", {
     vim.cmd(":highlight NvimTreeNormal guibg=NONE ctermbg=NONE")
     vim.cmd(":highlight NvimTreeNormalNC guibg=NONE ctermbg=NONE")
     vim.cmd(":highlight NvimTreeWinSeparator guibg=NONE ctermbg=NONE guifg=#000000")
+    vim.cmd(":Alpha")
   end
 })
 

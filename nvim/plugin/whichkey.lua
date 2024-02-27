@@ -17,7 +17,8 @@ local mappings = {
     p = { '<cmd>Mason<cr>', 'Abrir Mason' },
     u = { '<cmd>MasonUpdate<cr>', 'Update Mason' },
   },
-  p = { '<cmd>MarkdownPreviewToggle<cr>', 'MarkdownPreview' }
+  p = { '<cmd>MarkdownPreviewToggle<cr>', 'MarkdownPreview' },
+  a = { '<cmd>Alpha<cr>', 'Alpha' }
 }
 
 wk.register(mappings, { prefix = '<leader>' })

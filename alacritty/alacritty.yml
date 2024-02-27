@@ -45,3 +45,5 @@ font:
     family: Liga SFMono Nerd Font
     style: Regular
 
+mouse:
+  hide_when_typing: true
