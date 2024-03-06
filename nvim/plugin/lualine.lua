@@ -9,6 +9,7 @@ lualine.setup {
     lualine_x = { "encoding", { "fileformat", symbols = {
       -- unix = ""
       unix = "🌪️"
+      -- unix = "󰣇"
     } }, "filetype" },
   }
 }

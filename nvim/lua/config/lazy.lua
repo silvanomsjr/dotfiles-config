@@ -81,7 +81,7 @@ local plugins = {
     dependencies = {
       'rafamadriz/friendly-snippets',
       'saadparwaiz1/cmp_luasnip',
-    }
+    },
   },
   {
     'williamboman/mason.nvim'
