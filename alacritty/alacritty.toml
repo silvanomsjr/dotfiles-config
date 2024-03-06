@@ -34,8 +34,20 @@ foreground = "#c5c9c5"
 background = "#2D4F67"
 foreground = "#C8C093"
 
+[font.bold]
+family = "JetBrainsMono Nerd Font"
+style = "Bold"
+
+[font.bold_italic]
+family = "JetBrainsMono Nerd Font"
+style = "Bold Italic"
+
+[font.italic]
+family = "JetBrainsMono Nerd Font"
+style = "Italic"
+
 [font.normal]
-family = "Liga SFMono Nerd Font"
+family = "JetBrainsMono Nerd Font"
 style = "Regular"
 
 [mouse]
@@ -43,7 +55,7 @@ hide_when_typing = true
 
 [window]
 decorations = "None"
-opacity = 0.93
+opacity = 0.88
 startup_mode = "Maximized"
 
 [window.padding]

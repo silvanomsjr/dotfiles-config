@@ -36,14 +36,39 @@ window:
   padding:
     x: 8
     y: 8
-  opacity: 0.93
+  opacity: 0.88
   startup_mode: Maximized
   decorations: None
 
 font:
+  # normal:
+  #   family: Liga SFMono Nerd Font
+  #   style: Regular
+  # bold:
+  #   family: Liga SFMono Nerd Font
+  #   style: Bold
+  #
+  # italic:
+  #   family: Liga SFMono Nerd Font
+  #   style: Italic
+  #
+  # bold_italic:
+  #   family: Liga SFMono Nerd Font
+  #   style: Bold Italic 
   normal:
-    family: Liga SFMono Nerd Font
+    family: JetBrainsMono Nerd Font
     style: Regular
 
+  bold:
+    family: JetBrainsMono Nerd Font
+    style: Bold
+
+  italic:
+    family: JetBrainsMono Nerd Font
+    style: Italic
+
+  bold_italic:
+    family: JetBrainsMono Nerd Font
+    style: Bold Italic 
 mouse:
   hide_when_typing: true
