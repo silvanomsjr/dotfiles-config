@@ -1,5 +1,5 @@
-local alpha = require 'alpha'
-local dashboard = require 'alpha.themes.dashboard'
+local alpha = require("alpha")
+local dashboard = require("alpha.themes.dashboard")
 dashboard.section.header.val = {
   [[ ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿]],
   [[ ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠛⠋⠉⣉⣉⠙⠿⠋⣠⢴⣊⣙⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿]],
@@ -23,7 +23,7 @@ dashboard.section.buttons.val = {
 }
 dashboard.section.buttons.opts = {
   spacing = 0,
-  position = "center"
+  position = "center",
 }
 
 dashboard.section.footer.opts.hl = "Type"
