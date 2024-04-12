@@ -1,15 +1,22 @@
-local lualine = require 'lualine'
+local lualine = require("lualine")
 
-lualine.setup {
-  options = {
-    theme = 'iceberg_dark'
-    -- theme = 'ayu_dark'
-  },
-  sections = {
-    lualine_x = { "encoding", { "fileformat", symbols = {
-      -- unix = ""
-      unix = "🌪️"
-      -- unix = "󰣇"
-    } }, "filetype" },
-  }
-}
+lualine.setup({
+	options = {
+		theme = "iceberg_dark",
+		-- theme = 'ayu_dark'
+	},
+	sections = {
+		lualine_x = {
+			"encoding",
+			{
+				"fileformat",
+				symbols = {
+					-- unix = ""
+					unix = "🌪️",
+					-- unix = "󰣇"
+				},
+			},
+			"filetype",
+		},
+	},
+})

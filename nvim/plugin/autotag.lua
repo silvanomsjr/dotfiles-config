@@ -1,2 +1,2 @@
-local autotag = require 'nvim-ts-autotag'
-autotag.setup {}
+local autotag = require("nvim-ts-autotag")
+autotag.setup({})
