@@ -28,6 +28,7 @@ local servers = {
 	"stylua",
 	"prettierd",
 	"zprint",
+	"prismals",
 }
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
