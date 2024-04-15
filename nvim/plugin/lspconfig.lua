@@ -87,6 +87,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 			-- else
 			vim.lsp.buf.format({
 				async = false,
+				timeout_ms = 10000,
 				filter = function(client)
 					return client.name ~= "volar"
 				end,

@@ -111,7 +111,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias fzft='cd "$(find * -type d | fzf)" && tmux new -c "$(pwd)" -s tmuxtrampo'
+alias fzft='cd "$(find * -type d | fzf)" && tmux new -c "$(pwd)"'
 
 #PATH TO VUE
 export PATH=$PATH:/home/dxtxz/.yarn/bin
