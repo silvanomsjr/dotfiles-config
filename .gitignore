@@ -9,3 +9,7 @@
 !utils-stuff/
 !utils-stuff/*
 !utils-stuff/*/*
+!picom/
+!picom/*
+!i3/
+!i3/*

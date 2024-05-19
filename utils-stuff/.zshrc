@@ -113,6 +113,7 @@ source $ZSH/oh-my-zsh.sh
 
 alias fzft='cd "$(find * -type d | fzf)" && tmux new -c "$(pwd)"'
 
+bindkey '^ ' autosuggest-accept
 #PATH TO VUE
 export PATH=$PATH:/home/dxtxz/.yarn/bin
 #PATH TO LUNARVIM
@@ -120,11 +121,15 @@ export PATH=$PATH:/home/dxtxz/.local/bin
 #DIRENV
 eval "$(direnv hook zsh)"
 #VBLANK
-export vblank_mode=0
+export vblank_mode=1
+export NODE_PATH=/opt/lib/node_modules
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+
+# PATH TO QT5CT
+export QT_QPA_PLATFORMTHEME=qt5ct
 
 # pnpm
 export PNPM_HOME="/home/dxtxz/.local/share/pnpm"
