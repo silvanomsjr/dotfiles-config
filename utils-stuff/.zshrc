@@ -120,8 +120,6 @@ export PATH=$PATH:/home/dxtxz/.yarn/bin
 export PATH=$PATH:/home/dxtxz/.local/bin
 #DIRENV
 eval "$(direnv hook zsh)"
-#VBLANK
-export vblank_mode=1
 export NODE_PATH=/opt/lib/node_modules
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
