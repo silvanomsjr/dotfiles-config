@@ -11,3 +11,7 @@ To create ASCII images to Alpha, I'm currently using [ img2art ](https://github.
 # Alacritty
 
 Personal preference I guess.
+
+# WM
+
+Using i3 + i3status-rust + Rofi

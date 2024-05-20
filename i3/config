@@ -12,6 +12,7 @@ bindsym $mod+y border pixel 1
 bindsym $mod+n border normal
 
 bindsym $mod+F11 exec --no-startup-id gnome-calculator
+bindsym --release $mod+Shift+n exec --no-startup-id brave --incognito
 
 font xft:URWGothic-Book 11
 
@@ -255,8 +256,18 @@ client.background       #272827
 # client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 # client.background       #ffffff
 bar {
-  status_command i3status --config ~/.config/i3/.i3status.conf
+  font pango:DejaVu Sans Mono, FontAwesome 10 
+  status_command i3status-rs ~/.config/i3status-rust/config.toml
   position bottom 
+  colors {
+    separator #666666
+    background #222222
+    statusline #dddddd
+    focused_workspace #0088CC #0088CC #ffffff
+    active_workspace #333333 #333333 #ffffff
+    inactive_workspace #333333 #333333 #888888
+    urgent_workspace #2f343a #900000 #ffffff
+  }
 }
 
 # Gaps
