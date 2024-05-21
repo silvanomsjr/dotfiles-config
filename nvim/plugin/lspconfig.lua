@@ -29,6 +29,7 @@ local servers = {
 	"prettierd",
 	"zprint",
 	"prismals",
+	"fennel_language_server",
 }
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
@@ -110,14 +111,14 @@ for type, icon in pairs(signs) do
 	vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
 end
 
--- lspconfig.eslint.setup({
--- 	settings = {
--- 		packageManager = "npm",
--- 	},
--- 	on_attach = function(client, bufnr)
--- 		vim.api.nvim_create_autocmd("BufWritePre", {
--- 			buffer = bufnr,
--- 			command = "EslintFixAll",
--- 		})
--- 	end,
--- })
+lspconfig.eslint.setup({
+	settings = {
+		packageManager = "npm",
+	},
+	on_attach = function(client, bufnr)
+		vim.api.nvim_create_autocmd("BufWritePre", {
+			buffer = bufnr,
+			command = "EslintFixAll",
+		})
+	end,
+})

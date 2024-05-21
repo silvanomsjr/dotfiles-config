@@ -261,7 +261,7 @@ bar {
   position bottom 
   colors {
     separator #666666
-    background #09090b
+    background #06060F
     statusline #dddddd
     focused_workspace #0088CC #0088CC #ffffff
     active_workspace #333333 #333333 #ffffff

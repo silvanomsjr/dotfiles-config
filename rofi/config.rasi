@@ -1,10 +1,8 @@
 configuration {
-    font: "Envy Code R 10";
     line-margin: 10;
-
+    icon-theme: "Papirus-Dark";
     display-ssh:    ": ";
-    display-run:    ": ";
-    display-drun:   ": ";
+    display-drun:   "  ";
     display-window: ": ";
     display-combi:  ": ";
     show-icons:     true;
@@ -13,11 +11,3 @@ configuration {
 
 @theme "~/.config/rofi/dxtxz.rasi"
 
-listview {
-	lines: 8;
-	columns: 1;
-}
-
-window {
-	width: 40%;
-}

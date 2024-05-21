@@ -1,7 +1,7 @@
 icons_format = "{icon}"
 
 [theme]
-theme = "gruvbox-dark"
+theme = "space-villain"
 [theme.overrides]
 separator = ""
 # idle_bg = "#123456"
@@ -41,7 +41,7 @@ player = "brave"
 
 [[block]]
 block = "memory"
-format = " $icon $mem_used.eng(w:2) "
+format = " $icon $mem_used_percents.eng(w:2) "
 interval = 30
 warning_mem = 70
 critical_mem = 90

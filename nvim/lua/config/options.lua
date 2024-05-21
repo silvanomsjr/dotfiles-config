@@ -41,3 +41,5 @@ vim.g.ray_options = {
 	padding = 32,
 	language = "auto",
 }
+
+vim.deprecate = function() end ---@diagnostic disable-line: duplicate-set-field

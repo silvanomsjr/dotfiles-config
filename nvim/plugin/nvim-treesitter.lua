@@ -30,4 +30,5 @@ treesitter.setup({
 	highlight = {
 		enable = true,
 	},
+	sync_install = false,
 })
