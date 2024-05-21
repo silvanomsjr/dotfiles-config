@@ -34,16 +34,16 @@
     
     highlight:     underline bold #eceff4;
 
-    transparent: rgba(46,52,64,0);
+    transparent: rgba ( 47, 30, 46, 100 % );
 }
 
 window {
     location: center;
     anchor:   center;
-    transparency: "screenshot";
-    padding: 10px;
-    border:  0px;
-    border-radius: 6px;
+    //transparency: "screenshot";
+    padding: 5;
+    border:  1;
+    border-radius: 2px;
 
     background-color: @transparent;
     spacing: 0;
