@@ -2,6 +2,8 @@ icons_format = "{icon}"
 
 [theme]
 theme = "gruvbox-dark"
+[theme.overrides]
+separator = ""
 # idle_bg = "#123456"
 # idle_fg = "#abcdef"
 
@@ -37,7 +39,6 @@ block = "music"
 format = " $icon {$combo.str(max_w:30) $prev $play $next |} "
 player = "brave"
 
-
 [[block]]
 block = "memory"
 format = " $icon $mem_used.eng(w:2) "
@@ -50,3 +51,15 @@ block = "sound"
 [[block.click]]
 button = "left"
 cmd = "pavucontrol"
+
+[[block]]
+block = "custom"
+command = "echo \uf09b Git"
+interval = "once"
+[[block.click]]
+button = "left"
+cmd = "brave 'github.com/silvanomsjr'"
+
+[[block]]
+block = "uptime"
+interval = 100
