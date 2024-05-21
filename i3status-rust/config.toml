@@ -35,6 +35,8 @@ format = " $icon root: $available.eng(w:2) "
 [[block]]
 block = "music"
 format = " $icon {$combo.str(max_w:30) $prev $play $next |} "
+player = "brave"
+
 
 [[block]]
 block = "memory"

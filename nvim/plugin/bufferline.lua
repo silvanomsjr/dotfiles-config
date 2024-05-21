@@ -12,4 +12,10 @@ bufferline.setup({
 			},
 		},
 	},
+  highlights = {
+    fill = {
+      bg = "none",
+      fg = "none"
+    }
+  }
 })
