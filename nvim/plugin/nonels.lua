@@ -7,6 +7,6 @@ null_ls.setup({
 			extra_filetypes = { "svelte" },
 		}),
 		null_ls.builtins.formatting.black,
-		null_ls.builtins.diagnostics.eslint_d,
+		require("none-ls.diagnostics.eslint"),
 	},
 })

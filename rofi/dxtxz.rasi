@@ -112,7 +112,8 @@ scrollbar {
 // define colors etc.
 * {
     bg: #06060f;
-    hv: #9274ca; 
+    //hv: #9274ca; 
+    hv: #00223F;
     primary: #171633; 
     ug: #0B2447;
     font: "Monospace 11";
@@ -122,6 +123,7 @@ scrollbar {
     //kl: #7aa2f7;
     kl: #ffffff;
     black: #000000;
+    active-text: #c1c1c1;
 
     transparent: rgba(46,52,64,0);
 }
@@ -202,13 +204,13 @@ element-text {
 }
 
 element selected.normal {
-    color: @black;
+    color: @active-text;
     background-color: @hv;
 }
 
 element normal active {
     background-color: @hv;
-    color: @black;
+    color: @active-text;
 }
 
 element-text, element-icon {

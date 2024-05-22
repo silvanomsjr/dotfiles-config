@@ -25,9 +25,6 @@ local servers = {
 	"cssls",
 	"gopls",
 	"bashls",
-	"stylua",
-	"prettierd",
-	"zprint",
 	"prismals",
 	"fennel_language_server",
 }
@@ -111,14 +108,15 @@ for type, icon in pairs(signs) do
 	vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
 end
 
-lspconfig.eslint.setup({
-	settings = {
-		packageManager = "npm",
-	},
-	on_attach = function(client, bufnr)
-		vim.api.nvim_create_autocmd("BufWritePre", {
-			buffer = bufnr,
-			command = "EslintFixAll",
-		})
-	end,
-})
+-- lspconfig.eslint.setup({
+-- 	capabilities = capabilities,
+-- 	settings = {
+-- 		packageManager = "npm",
+-- 	},
+-- 	on_attach = function(client, bufnr)
+-- 		vim.api.nvim_create_autocmd("BufWritePre", {
+-- 			buffer = bufnr,
+-- 			command = "EslintFixAll",
+-- 		})
+-- 	end,
+-- })
