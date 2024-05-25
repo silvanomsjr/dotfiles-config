@@ -14,11 +14,6 @@ icons = "awesome6"
 # bat_charging = "|^| "
 
 [[block]]
-block = "time"
-interval = 5
-format = " $icon $timestamp.datetime(f:'%A %d/%m/%Y %R', l:pt_BR) "
-
-[[block]]
 block = "cpu"
 info_cpu = 20
 warning_cpu = 50
@@ -38,6 +33,9 @@ format = " $icon root: $available.eng(w:2) "
 block = "music"
 format = " $icon {$combo.str(max_w:30) $prev $play $next |} "
 player = "brave"
+[[block.click]]
+button = "left"
+cmd = "i3 workspace 9"
 
 [[block]]
 block = "memory"
@@ -61,5 +59,15 @@ button = "left"
 cmd = "brave 'github.com/silvanomsjr'"
 
 [[block]]
+block = "net"
+format = " \uf077 Up "
+inactive_format = " \uf078 Down "
+
+[[block]]
 block = "uptime"
 interval = 100
+
+[[block]]
+block = "time"
+interval = 5
+format = " $icon $timestamp.datetime(f:'%A %d/%m/%Y %R', l:pt_BR) "

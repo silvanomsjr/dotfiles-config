@@ -3,9 +3,9 @@ set $mod Mod4
 # new_window pixel 1
 # new_float normal
 
-# hide_edge_borders none 
+hide_edge_borders both
 
-default_border pixel 0 
+default_border pixel 1
 
 bindsym $mod+u border none
 bindsym $mod+y border pixel 1
@@ -20,7 +20,7 @@ floating_modifier $mod
 
 bindsym $mod+Return exec alacritty 
 
-exec --no-startup-id xrandr --output DP-3 --mode 1920x1080 --rate 144 --output HDMI-1 --mode 1920x1080 --rate 75 --left-of DP-3
+exec --no-startup-id xrandr --output DP-3 --mode 1920x1080 --rate 144 --primary --output HDMI-1 --mode 1920x1080 --rate 75 --left-of DP-3
 exec_always --no-startup-id /usr/lib/gsd-xsettings
 # exec_always --no-startup-id "gnome-settings-daemon"
 exec --no-startup-id pkill picom || picom -b
@@ -237,11 +237,11 @@ exec_always --no-startup-id fix_xcursor
 # bindsym $mod+Print exec --no-startup-id maim --window $(xdotool getativewindow) "/home/$USER/Imagens/screenshots/$(date)"
 
 bindsym --release Print exec --no-startup-id screenshotMXP="/home/dxtxz/Imagens/screenshot/$(date +%s).png" && maim -o -s "$screenshotMXP" && xclip -selection clipboard -t image/png "$screenshotMXP"
-# bindsym $mod+Shift+Print exec --no-startup-id maim -o --select "/home/dxtxz/Imagens/screenshot/$(date)"
+bindsym $mod+Shift+Print exec --no-startup-id maim -i $(xdotool getactivewindow) "/home/dxtxz/Imagens/screenshot/$(date +%s).png"
 
 
 # Theme colors
-client.focused          #272827 #285577 #ffffff #272827 #272827
+client.focused          #272827 #285577 #ffffff #272827 #595959 
 client.focused_inactive #272827 #272827 #657b83 #272827 #272827
 client.unfocused        #272827 #222222 #888888 #272827 #272827
 client.urgent           #272827 #272827 #657b83 #272827 #272827
@@ -256,14 +256,14 @@ client.background       #272827
 # client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 # client.background       #ffffff
 bar {
-  font pango:DejaVu Sans Mono, FontAwesome 10 
+  font pango:DejaVu Sans Mono, FontAwesome 10
   status_command i3status-rs ~/.config/i3status-rust/config.toml
   position bottom 
   colors {
     separator #666666
-    background #06060F
+    background #06060f
     statusline #dddddd
-    focused_workspace #0088CC #0088CC #ffffff
+    focused_workspace #888888 #00223f #ffffff
     active_workspace #333333 #333333 #ffffff
     inactive_workspace #333333 #333333 #888888
     urgent_workspace #2f343a #900000 #ffffff
