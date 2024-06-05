@@ -192,6 +192,12 @@ local plugins = {
 			"nvimtools/none-ls-extras.nvim",
 		},
 	},
+	{
+		"EdenEast/nightfox.nvim",
+	},
+	{
+		"Shatur/neovim-ayu",
+	},
 }
 
 require("lazy").setup(plugins)

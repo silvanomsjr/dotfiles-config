@@ -21,6 +21,7 @@ vim.opt.signcolumn = "yes"
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 vim.opt.foldenable = false
+vim.o.modeline = false
 
 -- Isso aqui é pra tirar o background do NvimTree
 

@@ -59,11 +59,6 @@ button = "left"
 cmd = "brave 'github.com/silvanomsjr'"
 
 [[block]]
-block = "net"
-format = " \uf077 Up "
-inactive_format = " \uf078 Down "
-
-[[block]]
 block = "uptime"
 interval = 100
 

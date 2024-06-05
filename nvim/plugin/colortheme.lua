@@ -35,7 +35,7 @@ require("tokyonight").setup({
 })
 
 require("kanagawa").setup({
-	transparent = true,
+	transparent = false,
 	colors = {
 		theme = {
 			all = {
@@ -54,5 +54,29 @@ require("kanagawa").setup({
 	},
 })
 
+require("nightfox").setup({
+	options = {
+		transparent = true,
+		terminal_colors = true,
+		colorblind = {
+			enable = false,
+		},
+	},
+})
+
+require("ayu").setup({
+	overrides = {
+		Normal = { bg = "None" },
+		ColorColumn = { bg = "None" },
+		SignColumn = { bg = "None" },
+		Folded = { bg = "None" },
+		FoldColumn = { bg = "None" },
+		CursorLine = { bg = "None" },
+		CursorColumn = { bg = "None" },
+		WhichKeyFloat = { bg = "None" },
+		VertSplit = { bg = "None" },
+	},
+})
+
 vim.opt.fillchars = { eob = " " }
-vim.cmd("colorscheme tokyonight")
+vim.cmd("colorscheme ayu-mirage")

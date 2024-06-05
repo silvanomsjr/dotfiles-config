@@ -42,4 +42,6 @@ require("lualine").setup({
 
 notify.setup({
 	timeout = 700,
+	background_colour = "#000000",
+	fps = 144,
 })
