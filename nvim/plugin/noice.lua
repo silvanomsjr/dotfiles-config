@@ -36,6 +36,7 @@ require("lualine").setup({
 				cond = require("noice").api.status.mode.has,
 				color = { fg = "#098fff" },
 			},
+			{ "filename", path = 1 },
 		},
 	},
 })
