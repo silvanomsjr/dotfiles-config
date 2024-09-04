@@ -8,4 +8,4 @@ smoke_tests="Normal
 == === !== >= <= =>
 契          勒 鈴 "
 
-printf "%b" "${smoke_tests}"
+printf "%b" "${smoke_tests}" "\n"

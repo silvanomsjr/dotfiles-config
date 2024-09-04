@@ -10,12 +10,42 @@ masonlspconfig.setup({
 -- Neodev Stuff
 require("neodev").setup({})
 
--- Setup language servers.
 local lspconfig = require("lspconfig")
+local capabilities = require("cmp_nvim_lsp").default_capabilities()
+
+--Server que deixei fora
+-- volar
+-- tsserver
+local vue_typescript_plugin = "/home/dxtxz/.npm-packages"
+	.. "/lib/node_modules"
+	.. "/@vue/language-server/node_modules"
+	.. "/@vue/typescript-plugin"
+
+lspconfig.tsserver.setup({
+	init_options = {
+		plugins = {
+			{
+				name = "@vue/typescript-plugin",
+				location = vue_typescript_plugin,
+				languages = { "javascript", "typescript", "vue" },
+			},
+		},
+	},
+	filetypes = {
+		"javascript",
+		"javascriptreact",
+		"javascript.jsx",
+		"typescript",
+		"typescriptreact",
+		"typescript.jsx",
+		"vue",
+	},
+})
+
+lspconfig.volar.setup({})
+
 local servers = {
 	"pyright",
-	"tsserver",
-	"volar",
 	"lua_ls",
 	"html",
 	"clojure_lsp",
@@ -28,7 +58,6 @@ local servers = {
 	"prismals",
 	"fennel_language_server",
 }
-local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 for _, server in pairs(servers) do
 	if server == "lua_ls" then
@@ -91,7 +120,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 				end,
 			})
 			-- end
-			vim.diagnostic.enable(0)
+			vim.diagnostic.enable(true)
 		end, opts)
 	end,
 })

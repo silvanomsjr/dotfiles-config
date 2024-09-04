@@ -3,7 +3,8 @@ icons_format = "{icon}"
 [theme]
 theme = "space-villain"
 [theme.overrides]
-separator = ""
+separator = "|"
+separator_fg = "#ffffff"
 # idle_bg = "#123456"
 # idle_fg = "#abcdef"
 

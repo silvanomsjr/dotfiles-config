@@ -7,6 +7,16 @@ null_ls.setup({
 			extra_filetypes = { "svelte", "vue" },
 		}),
 		null_ls.builtins.formatting.black,
-		require("none-ls.diagnostics.eslint"),
+		require("none-ls.diagnostics.eslint").with({
+			condition = function(utils)
+				return utils.root_has_file({
+					".eslintrc.js",
+					".eslintrc.json",
+					".eslintrc.cjs",
+					".eslint.config.mjs",
+					".eslint.config.js",
+				})
+			end,
+		}),
 	},
 })

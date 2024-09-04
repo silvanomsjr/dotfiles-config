@@ -201,6 +201,9 @@ local plugins = {
 	{
 		"Shatur/neovim-ayu",
 	},
+	{
+		"nvim-pack/nvim-spectre",
+	},
 }
 
 require("lazy").setup(plugins)
