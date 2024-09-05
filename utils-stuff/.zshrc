@@ -112,6 +112,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias fzft='cd "$(find * -type d | fzf)" && tmux new -c "$(pwd)"'
+alias fzfd='cd "$(find * -type d | fzf)"'
 
 bindkey '^ ' autosuggest-accept
 #PATH TO VUE
@@ -125,10 +126,6 @@ export NODE_PATH=/opt/lib/node_modules
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-
-# PATH TO QT5CT
-export QT_QPA_PLATFORMTHEME=qt5ct
-
 # pnpm
 export PNPM_HOME="/home/dxtxz/.local/share/pnpm"
 case ":$PATH:" in
@@ -136,3 +133,12 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+# npm
+
+NPM_PACKAGES="/home/dxtxz/.npm_packages"
+export PATH="$PATH:$NPM_PACKAGES/bin"
+
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
