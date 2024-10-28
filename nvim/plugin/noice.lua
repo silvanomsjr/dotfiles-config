@@ -21,28 +21,9 @@ noice.setup({
 	},
 })
 
-require("lualine").setup({
-	sections = {
-		lualine_c = {
-			{
-				function()
-					local macro_message = require("noice").api.status.mode.get()
-					if macro_message:find("gravando @*") then
-						return macro_message
-					else
-						return ""
-					end
-				end,
-				cond = require("noice").api.status.mode.has,
-				color = { fg = "#098fff" },
-			},
-			{ "filename", path = 1 },
-		},
-	},
-})
-
 notify.setup({
-	timeout = 700,
-	background_colour = "#000000",
-	fps = 144,
+	notify._config(),
+	background_colour = "#000",
+	timeout = 3000,
+	render = "wrapped-compact",
 })

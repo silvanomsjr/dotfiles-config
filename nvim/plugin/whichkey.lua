@@ -14,6 +14,7 @@ local mappings = {
 	{ "<leader>th", "<cmd>Telescope help_tags<cr>", desc = "Help tags" },
 	{ "<leader>tk", "<cmd>Telescope keymaps<cr>", desc = "Keymaps" },
 	{ "<leader>tl", "<cmd>Telescope live_grep<cr>", desc = "Live Grep" },
+	{ "<leader>xx", "<cmd>Trouble diagnostics toggle<CR>", desc = "Trouble" },
 }
 
 -- wk.add(mappings, { prefix = "<leader>" })

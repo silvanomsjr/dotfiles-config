@@ -1,2 +1,1 @@
-local trouble = require("trouble")
-trouble.setup()
+require("trouble").setup({})

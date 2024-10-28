@@ -3,7 +3,7 @@ require("tokyonight").setup({
 	-- or leave it empty to use the default settings
 	style = "night", -- The theme comes in three styles, `storm`, `moon`, a darker variant `night` and `day`
 	light_style = "day", -- The theme is used when the background is set to light
-	transparent = true, -- Enable this to disable setting the background color
+	-- transparent = true, -- Enable this to disable setting the background color
 	terminal_colors = true, -- Configure the colors used when opening a `:terminal` in [Neovim](https://github.com/neovim/neovim)
 	styles = {
 		-- Style to be applied to different syntax groups
@@ -59,7 +59,10 @@ require("nightfox").setup({
 		transparent = true,
 		terminal_colors = true,
 		colorblind = {
-			enable = false,
+			enable = true,
+			protan = 0.4,
+			deutan = 0.4,
+			tritan = 0.2,
 		},
 	},
 })
@@ -78,5 +81,11 @@ require("ayu").setup({
 	},
 })
 
+require("catppuccin").setup({
+	transparent_background = true,
+})
+
 vim.opt.fillchars = { eob = " " }
-vim.cmd("colorscheme ayu-mirage")
+-- vim.cmd("colorscheme ayu-mirage")
+-- vim.cmd("colorscheme tokyonight-night")
+vim.cmd("colorscheme carbonfox")
