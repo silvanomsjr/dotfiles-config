@@ -8,6 +8,7 @@ noice.setup({
 			["vim.lsp.util.convert_input_to_markdown_lines"] = true,
 			["vim.lsp.util.stylize_markdown"] = true,
 			["cmp.entry.get_documentation"] = true, -- requires hrsh7th/nvim-cmp
+			["vim.lsp.util.open_floating_preview"] = true,
 		},
 	},
 
@@ -26,4 +27,5 @@ notify.setup({
 	background_colour = "#000",
 	timeout = 3000,
 	render = "wrapped-compact",
+	top_down = false,
 })

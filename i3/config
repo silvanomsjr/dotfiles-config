@@ -107,6 +107,9 @@ set $ws8 8
 set $ws9 9
 set $ws10 10
 
+workspace 1 output DP-3
+workspace 10 output HMDI-1
+
 # switch to workspace
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
@@ -224,21 +227,20 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
-set $personal ~/Documentos/personal
-
 # Autostart applications
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id nm-applet
 # exec --no-startup-id xfce4-power-manager
 exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
-exec --no-startup-id cat ~/Documentos/personal/meme/ultra-secret-power-blaster-megazoid/password.conf | keepassxc --pw-stdin ~/Documentos/personal/pass.kdbx
+exec --no-startup-id cat ~/Documentos/personal/meme/ultra-secret-power-blaster-megazoid/password.conf | keepassxc --pw-stdin ~/Documentos/personal/meme/ultra-secret-power-blaster-megazoid/pass.kdbx
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
-exec_always --no-startup-id greenclip daemon>/dev/null
+# exec_always --no-startup-id greenclip daemon>/dev/null
 exec_always --no-startup-id autotiling
 
-bindsym $mod+c exec --no-startup-id rofi -modi "clipboard:greenclip print" -show clipboard
+# bindsym $mod+c exec --no-startup-id rofi -modi "clipboard:greenclip print" -show clipboard
+bindsym $mod+m exec --no-startup-id rofi -modi "emoji:rofimoji" -show emoji
 # exec_always --no-startup-id $HOME/.config/polybar/i3wmthemer_bar_launch.sh
 
 # bindsym Print exec --no-startup-id maim "/home/$USER/Imagens/screenshots/$(date)"

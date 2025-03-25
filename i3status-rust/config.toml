@@ -5,6 +5,7 @@ theme = "space-villain"
 [theme.overrides]
 separator = "|"
 separator_fg = "#ffffff"
+# separator_bg = "#ffffff"
 # idle_bg = "#123456"
 # idle_fg = "#abcdef"
 
@@ -36,7 +37,7 @@ format = " $icon {$combo.str(max_w:30) $prev $play $next |} "
 player = "brave"
 [[block.click]]
 button = "left"
-cmd = "i3 workspace 9"
+cmd = "i3 workspace 6"
 
 [[block]]
 block = "memory"

@@ -15,6 +15,8 @@ vim.opt.swapfile = false
 vim.opt.ignorecase = true
 vim.opt.timeoutlen = 100
 vim.opt.number = true
+vim.opt.autoindent = true
+vim.opt.smarttab = true
 vim.opt.termguicolors = true
 vim.opt.signcolumn = "yes"
 -- use treesitter folding
