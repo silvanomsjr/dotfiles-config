@@ -46,3 +46,23 @@ vim.g.ray_options = {
 }
 
 vim.deprecate = function() end ---@diagnostic disable-line: duplicate-set-field
+
+
+
+--[[ Tenho que lembrar de instalar essas fontes aqui:
+sdl2_ttf 2.24.0-1
+ttf-dejavu 2.37+18+g9b5d1b2f-7
+ttf-droid 20121017-11
+ttf-fira-code 6.2-2
+ttf-font-awesome 6.7.2-1
+ttf-inconsolata 1:3.000-4
+ttf-jetbrains-mono 2.304-2
+ttf-liberation 2.1.5-2
+ttf-linux-libertine 5.3.0-10
+ttf-montserrat 7.222-2
+ttf-ms-fonts 2.0-12
+ttf-nerd-fonts-symbols 3.3.0-1
+ttf-nerd-fonts-symbols-common 3.3.0-1
+ttf-opensans 3.003-1
+ttf-roboto 3.010-1
+ttf-ubuntu-font-family 1:0.83-2 ]]
