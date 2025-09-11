@@ -14,8 +14,8 @@ bufferline.setup({
 	},
 	highlights = {
 		fill = {
-			bg = "none",
-			fg = "none",
+			guibg = "none",
+			guifg = "none",
 		},
 	},
 })

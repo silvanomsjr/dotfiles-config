@@ -18,3 +18,5 @@
 !i3status-rust/*
 !rofi/
 !rofi/*
+!fontconfig/
+!fontconfig/*

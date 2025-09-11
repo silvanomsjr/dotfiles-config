@@ -108,7 +108,7 @@ set $ws9 9
 set $ws10 10
 
 workspace 1 output DP-3
-workspace 10 output HMDI-1
+workspace 10 output HDMI-1
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -187,7 +187,7 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # Set shut down, restart and locking features
-bindsym $mod+Pause mode "$mode_system"
+bindsym $mod+Delete mode "$mode_system"
 set $mode_system (l)ock, (e)xit, switch_(u)ser, (s)uspend, (h)ibernate, (r)eboot, (Shift+s)hutdown
 mode "$mode_system" {
     bindsym l exec --no-startup-id i3lock, mode "default"
@@ -246,8 +246,14 @@ bindsym $mod+m exec --no-startup-id rofi -modi "emoji:rofimoji" -show emoji
 # bindsym Print exec --no-startup-id maim "/home/$USER/Imagens/screenshots/$(date)"
 # bindsym $mod+Print exec --no-startup-id maim --window $(xdotool getativewindow) "/home/$USER/Imagens/screenshots/$(date)"
 
-bindsym --release Print exec --no-startup-id screenshotMXP="/home/dxtxz/Imagens/screenshot/$(date +%s).png" && maim -o -s "$screenshotMXP" && xclip -selection clipboard -t image/png "$screenshotMXP"
-bindsym $mod+Shift+Print exec --no-startup-id maim -i $(xdotool getactivewindow) "/home/dxtxz/Imagens/screenshot/$(date +%s).png"
+
+# Keybind pra conseguir copiar textos
+
+bindsym --release $mod+Page_Down exec --no-startup-id screenshotMXP="/tmp/ocr_temp_$(date +%s).png" && maim -o -s "$screenshotMXP" && tesseract "$screenshotMXP" stdout -l por | xclip -selection clipboard && rm "$screenshotMXP" && notify-send 'OCR Concluído' 'Texto da imagem copiado para a área de transferência!'
+
+
+bindsym --release $mod+End exec --no-startup-id screenshotMXP="/home/dxtxz/Imagens/screenshot/$(date +%s).png" && maim -o -s "$screenshotMXP" && xclip -selection clipboard -t image/png "$screenshotMXP"
+bindsym $mod+Shift+End exec --no-startup-id maim -i $(xdotool getactivewindow) "/home/dxtxz/Imagens/screenshot/$(date +%s).png"
 
 
 # Theme colors
@@ -326,10 +332,10 @@ mode "$mode_gaps_outer" {
 # set power-manager and volume control
 exec --no-startup-id mate-power-manager
 
-# bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -c 0 -q set Master 2dB+ unmute
-# bindsym XF86AudioLowerVolume exec --no-startup-id amixer -c 0 -q set Master 2db- unmute
-# bindsym XF86AudioMute exec --no-startup-id amixer -q set Master toggle
-
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master 5%+ unmute
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master 5%- unmute
+bindsym XF86AudioMute exec --no-startup-id amixer -q set Master toggle
+#
 # touchpad on and off controller on laptop with Fn+<touchpad control functional key>
 # bindsym XF86TouchpadOn exec --no-startup-id synclient Touchpadoff=0
 # bindsym XF86TouchpadOff exec --no-startup-id synclient Touchpadoff=1

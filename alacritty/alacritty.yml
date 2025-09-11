@@ -55,6 +55,7 @@ font:
   # bold_italic:
   #   family: Liga SFMono Nerd Font
   #   style: Bold Italic
+  #
   normal:
     family: JetBrainsMono Nerd Font
     style: Regular
@@ -70,5 +71,23 @@ font:
   bold_italic:
     family: JetBrainsMono Nerd Font
     style: Bold Italic
+  # #
+  # #
+  # 
+  # normal:
+  #   family: mononoki 
+  #   style: Regular
+  #
+  # bold:
+  #   family: mononoki
+  #   style: Bold
+  #
+  # italic:
+  #   family: mononoki
+  #   style: Italic
+  #
+  # bold_italic:
+  #   family: mononoki
+  #   style: Bold Italic
 mouse:
   hide_when_typing: true

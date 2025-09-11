@@ -112,7 +112,7 @@ scrollbar {
 // define colors etc.
 * {
     bg: #06060f;
-    //hv: #9274ca; 
+    // hv: #9274ca; 
     hv: #00223F;
     primary: #171633; 
     ug: #0B2447;

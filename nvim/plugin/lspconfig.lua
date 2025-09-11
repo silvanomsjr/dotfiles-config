@@ -7,6 +7,8 @@ masonlspconfig.setup({
 	automatic_installation = true,
 })
 
+local pid = tostring(vim.fn.getpid())
+
 -- Neodev Stuff
 require("neodev").setup({})
 
@@ -16,6 +18,7 @@ local capabilities = require("cmp_nvim_lsp").default_capabilities()
 --Server que deixei fora
 -- volar
 -- tsserver
+-- omnisharp
 local vue_typescript_plugin = "/home/dxtxz/.npm-packages"
 	.. "/lib/node_modules"
 	.. "/@vue/language-server/node_modules"
@@ -44,6 +47,11 @@ lspconfig.tsserver.setup({
 
 lspconfig.volar.setup({})
 
+lspconfig.omnisharp.setup({
+  cmd = { "omnisharp", "--languageserver", "--hostPID", pid },
+  capabilities = capabilities,
+})
+
 local servers = {
 	"pyright",
 	"lua_ls",
@@ -56,6 +64,7 @@ local servers = {
 	"gopls",
 	"bashls",
 	"prismals",
+	"phpactor",
 	"fennel_language_server",
 }
 

@@ -5,6 +5,7 @@ treesitter.setup({
 	ensure_installed = {
 		"cpp",
 		"c",
+    "c_sharp",
 		"astro",
 		"css",
 		"rust",
