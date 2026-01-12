@@ -14,4 +14,14 @@ telescope.setup({
 			treesitter = false,
 		},
 	},
+	pickers = {
+		find_files = {
+			find_command = {
+				"fd",
+				"--type",
+				"f",
+				"--hidden",
+			},
+		},
+	},
 })
