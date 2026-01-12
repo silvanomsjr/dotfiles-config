@@ -272,7 +272,7 @@ client.background       #272827
 # client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 # client.background       #ffffff
 bar {
-  font pango:DejaVu Sans Mono, FontAwesome 6 Free 10
+  font pango:DejaVu Sans Mono, FontAwesome 10
   status_command i3status-rs ~/.config/i3status-rust/config.toml
   position bottom 
   colors {
