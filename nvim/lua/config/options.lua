@@ -49,6 +49,17 @@ vim.deprecate = function() end ---@diagnostic disable-line: duplicate-set-field
 
 
 
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "oil",
+  callback = function()
+    vim.keymap.set("n", "q", "<cmd>bd<cr>", {
+      buffer = true,
+      desc = "Close Oil buffer",
+    })
+  end,
+})
+
+
 --[[ Tenho que lembrar de instalar essas fontes aqui:
 sdl2_ttf 2.24.0-1
 ttf-dejavu 2.37+18+g9b5d1b2f-7

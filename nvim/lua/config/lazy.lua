@@ -27,6 +27,23 @@ local plugins = {
 			})
 		end,
 	},
+  {
+    "stevearc/oil.nvim",
+    dependencies = { "nvim-tree/nvim-web-devicons" }, -- opcional
+    config = function()
+      require("oil").setup({
+        default_file_explorer = true, -- substitui netrw
+        columns = {
+          "icon",
+        },
+        delete_to_trash = true,
+        skip_confirm_for_simple_edits = true,
+        view_options = {
+          show_hidden = true,
+        },
+      })
+    end,
+  },
 	{
 		"craftzdog/solarized-osaka.nvim",
 		lazy = false,

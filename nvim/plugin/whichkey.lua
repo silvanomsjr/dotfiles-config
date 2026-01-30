@@ -2,7 +2,8 @@ local wk = require("which-key")
 
 local mappings = {
 	{ "<leader>a", "<cmd>Alpha<cr>", desc = "Alpha" },
-	{ "<leader>e", "<cmd>NvimTreeToggle<cr>", desc = "File Explorer" },
+	-- { "<leader>e", "<cmd>NvimTreeToggle<cr>", desc = "File Explorer" },
+	{ "<leader>e", "<cmd>Oil<cr>", desc = "File Explorer" },
 	{ "<leader>m", group = "Mason" },
 	{ "<leader>mp", "<cmd>Mason<cr>", desc = "Abrir Mason" },
 	{ "<leader>mu", "<cmd>MasonUpdate<cr>", desc = "Update Mason" },
